@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="demo.js"></script>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <div class="demo1">
+      <div class="demo1-controls-container">
+        <button style="width: 75px; margin: auto" onclick="movePicture()">Up</button>
+        <div style="display: flex; gap: 5px">
+          <button style="width: 75px" onclick="move('left')">Left</button>
+          <button style="width: 75px" onclick="move('right')">Right</button>
+        </div>
+        <button style="width: 75px; margin: auto" onclick="marqueePicture()">Down</button>
+      </div>
+      <div class="demo1-picture-container">
+        <img id="picture1" src="https://content.mrbunz.com/picture.webp" class="picture" />
+      </div>
+    </div>
+  </body>
+</html>

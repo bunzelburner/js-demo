@@ -5,20 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="demo.js"></script>
-    <title>Hello World</title>
+    <title>Javascript Demo 1</title>
   </head>
   <body>
+    <div class="nav-buttons">
+      <button id="demo1-button" style="background-color: blue; color: white" onclick="navigateTo('demo1')">Demo 1</button>
+      <button id="demo2-button" style="background-color: white; color: black" onclick="navigateTo('demo2')">Demo 2</button>
+      <button onclick="toggleFullscreen()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+          <path
+            id="exit-fullscreen"
+            style="display: none"
+            d="M144,104V64a8,8,0,0,1,16,0V84.69l42.34-42.35a8,8,0,0,1,11.32,11.32L171.31,96H192a8,8,0,0,1,0,16H152A8,8,0,0,1,144,104Zm-40,40H64a8,8,0,0,0,0,16H84.69L42.34,202.34a8,8,0,0,0,11.32,11.32L96,171.31V192a8,8,0,0,0,16,0V152A8,8,0,0,0,104,144Zm67.31,16H192a8,8,0,0,0,0-16H152a8,8,0,0,0-8,8v40a8,8,0,0,0,16,0V171.31l42.34,42.35a8,8,0,0,0,11.32-11.32ZM104,56a8,8,0,0,0-8,8V84.69L53.66,42.34A8,8,0,0,0,42.34,53.66L84.69,96H64a8,8,0,0,0,0,16h40a8,8,0,0,0,8-8V64A8,8,0,0,0,104,56Z"
+          />
+          <path
+            id="enter-fullscreen"
+            style="display: block"
+            d="M216,48V96a8,8,0,0,1-16,0V67.31l-42.34,42.35a8,8,0,0,1-11.32-11.32L188.69,56H160a8,8,0,0,1,0-16h48A8,8,0,0,1,216,48ZM98.34,146.34,56,188.69V160a8,8,0,0,0-16,0v48a8,8,0,0,0,8,8H96a8,8,0,0,0,0-16H67.31l42.35-42.34a8,8,0,0,0-11.32-11.32ZM208,152a8,8,0,0,0-8,8v28.69l-42.34-42.35a8,8,0,0,0-11.32,11.32L188.69,200H160a8,8,0,0,0,0,16h48a8,8,0,0,0,8-8V160A8,8,0,0,0,208,152ZM67.31,56H96a8,8,0,0,0,0-16H48a8,8,0,0,0-8,8V96a8,8,0,0,0,16,0V67.31l42.34,42.35a8,8,0,0,0,11.32-11.32Z"
+          />
+        </svg>
+      </button>
+    </div>
     <div class="demo1">
-      <div class="demo1-controls-container">
-        <button style="width: 75px; margin: auto" onclick="movePicture()">Up</button>
-        <div style="display: flex; gap: 5px">
-          <button style="width: 75px" onclick="move('left')">Left</button>
-          <button style="width: 75px" onclick="move('right')">Right</button>
+      <div style="display: flex; gap: 20px">
+        <div class="demo1-controls-container">
+          <button onclick="movePicture('up')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+              <path
+                d="M229.66,114.34l-96-96a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,32,128H72v80a16,16,0,0,0,16,16h80a16,16,0,0,0,16-16V128h40a8,8,0,0,0,5.66-13.66ZM176,112a8,8,0,0,0-8,8v88H88V120a8,8,0,0,0-8-8H51.31L128,35.31,204.69,112Z"
+              ></path>
+            </svg>
+          </button>
+          <div style="display: flex; gap: 5px">
+            <button onclick="movePicture('left')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                <path
+                  d="M208,72H128V32a8,8,0,0,0-13.66-5.66l-96,96a8,8,0,0,0,0,11.32l96,96A8,8,0,0,0,128,224V184h80a16,16,0,0,0,16-16V88A16,16,0,0,0,208,72Zm0,96H120a8,8,0,0,0-8,8v28.69L35.31,128,112,51.31V80a8,8,0,0,0,8,8h88Z"
+                ></path>
+              </svg>
+            </button>
+            <button onclick="movePicture('right')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                <path
+                  d="M237.66,122.34l-96-96A8,8,0,0,0,128,32V72H48A16,16,0,0,0,32,88v80a16,16,0,0,0,16,16h80v40a8,8,0,0,0,13.66,5.66l96-96A8,8,0,0,0,237.66,122.34ZM144,204.69V176a8,8,0,0,0-8-8H48V88h88a8,8,0,0,0,8-8V51.31L220.69,128Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <button onclick="movePicture('down')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+              <path
+                d="M231.39,132.94A8,8,0,0,0,224,128H184V48a16,16,0,0,0-16-16H88A16,16,0,0,0,72,48v80H32a8,8,0,0,0-5.66,13.66l96,96a8,8,0,0,0,11.32,0l96-96A8,8,0,0,0,231.39,132.94ZM128,220.69,51.31,144H80a8,8,0,0,0,8-8V48h80v88a8,8,0,0,0,8,8h28.69Z"
+              ></path>
+            </svg>
+          </button>
         </div>
-        <button style="width: 75px; margin: auto" onclick="marqueePicture()">Down</button>
+        <div class="demo1-colors-container">
+          <div style="text-align: center; width: 100px">Canvas Color</div>
+          <button onclick="changeBackgroundColor('white')">White</button>
+          <button onclick="changeBackgroundColor('red')">Red</button>
+          <button onclick="changeBackgroundColor('orange')">Orange</button>
+          <button onclick="changeBackgroundColor('yellow')">Yellow</button>
+          <button onclick="changeBackgroundColor('black')">Black</button>
+        </div>
+        <div class="demo1-colors-container">
+          <div style="text-align: center; width: 100px">Picture Opacity</div>
+          <button onclick="changePictureOpacity(0)">0%</button>
+          <button onclick="changePictureOpacity(25)">25%</button>
+          <button onclick="changePictureOpacity(50)">50%</button>
+          <button onclick="changePictureOpacity(75)">75%</button>
+          <button onclick="changePictureOpacity(100)">100%</button>
+        </div>
+        <div class="demo1-colors-container">
+          <div style="text-align: center; width: 100px">Picture Display</div>
+          <button onclick="changePictureDisplay('none')">None</button>
+          <button onclick="changePictureDisplay('block')">Block</button>
+        </div>
+        <div class="demo1-stats-container">
+          <div class="demo1-stats-line">
+            <div class="demo1-stats-label">Left:</div>
+            <div id="picture-left"></div>
+          </div>
+          <div class="demo1-stats-line">
+            <div class="demo1-stats-label">Top:</div>
+            <div id="picture-top"></div>
+          </div>
+          <div class="demo1-stats-line">
+            <div class="demo1-stats-label">Right:</div>
+            <div id="picture-right"></div>
+          </div>
+          <div class="demo1-stats-line">
+            <div class="demo1-stats-label">Bottom:</div>
+            <div id="picture-bottom"></div>
+          </div>
+        </div>
       </div>
       <div class="demo1-picture-container">
         <img id="picture1" src="https://content.mrbunz.com/picture.webp" class="picture" />
+      </div>
+    </div>
+    <div class="demo2">
+      <marquee id="marquee" scrollamount="30" direction="right" style="width: 1px; font-size: 50px">This is a marq-weeeeeeee!</marquee>
+      <div style="display: flex; gap: 10px">
+        <button onclick="blockingCountDown()">Blocking Countdown</button>
+        <button onclick="nonBlockingCountdown()">Non-Blocking Countdown</button>
+        <div class="countdown-timer">
+          <div>Time Left:</div>
+          <div id="countdown-timer-value" style="margin-left: auto">15</div>
+        </div>
       </div>
     </div>
   </body>

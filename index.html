@@ -8,13 +8,14 @@
     <script src="demo2.js" defer></script>
     <script src="demo3.js" defer></script>
     <script src="main.js" defer></script>
-    <title>Javascript Demo 1</title>
+    <title>Javascript Demo</title>
   </head>
   <body>
     <div class="nav-buttons">
       <button id="demo1-button" style="background-color: blue; color: white" onclick="navigateTo('demo1')">Demo 1</button>
       <button id="demo2-button" style="background-color: white; color: black" onclick="navigateTo('demo2')">Demo 2</button>
       <button id="demo3-button" style="background-color: white; color: black" onclick="navigateTo('demo3')">Demo 3</button>
+      <button id="demo4-button" style="background-color: white; color: black" onclick="navigateTo('demo4')">Demo 4</button>
       <button onclick="toggleFullscreen()">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
           <path
@@ -129,6 +130,21 @@
         </div>
         <button onclick="clearList()">Clear list</button>
       </div>
+    </div>
+    <div class="demo4">
+      <div class="menu">
+        <button>Menu</button>
+        <div class="menu-list">
+          <div class="menu-item"><a href="https://google.com" target="_blank">Google</a></div>
+          <div class="menu-item"><a href="https://amazon.com" target="_blank">Amazon</a></div>
+          <div class="menu-item"><a href="https://cvsd.org" target="_blank">CVSD</a></div>
+        </div>
+      </div>
+      <div style="margin-top: 5px">Some other stuff down here</div>
+      <div>and some other stuff down here</div>
+      <div>and some other stuff down here</div>
+      <div>and some other stuff down here</div>
+      <div>and some other stuff down here</div>
     </div>
   </body>
 </html>

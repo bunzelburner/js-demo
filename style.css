@@ -163,7 +163,7 @@ button {
   gap: 5px;
   min-height: 100px;
   border: 1px solid black;
-  min-width: 100px;
+  min-width: 200px;
   padding: 5px;
   background-color: white;
 }
@@ -181,4 +181,10 @@ button {
 
 .menu-item:hover {
   background-color: lightgray;
+}
+
+.menu-picture {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 150px;
 }
